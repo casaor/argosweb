@@ -1,0 +1,1402 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+h1,h2,h3 {
+	font-family: 'Arya', sans-serif;
+}
+
+h3 {
+	color: white;
+	font-size: 2.1rem;
+	line-height: 1.07;
+	letter-spacing: 0.3px;
+}
+
+h4 {
+	color: white;
+	font-size: 1.3rem;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	border-radius: 6px; /* per arrodonir cantonades */
+	border: 1px;
+	padding: 7px;
+	width:120px;
+	height:34px;
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: 0.5px;
+	font-size: 0.9rem;
+	cursor: pointer; /* canviar cursor */
+}
+
+/* NAVEGACIÓ */
+
+header {
+	top: 0;
+	width: 100%;
+	height: 60px;
+	background-color: slategray;
+	overflow: hidden;
+	position: fixed; /* el menú es queda fixat quan fas scroll */
+	z-index: 99;
+	display: flex;
+	justify-content: center;
+	opacity: 0.9;
+}
+
+.navbar{
+	width: 94%;
+	height: 60px;
+	font-size: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#logo {
+	background-image: url('../img/logo_argos.svg');
+	background-repeat: no-repeat; /* perquè no es repeteixi la imatge*/
+	width:100px;
+	height:28px;
+	margin-top: 5px;
+	text-indent: -999999px;
+	cursor: pointer;
+}
+
+#logo:hover {
+	background-image: url('../img/logo_argos_green.svg');
+	background-repeat: no-repeat;
+}
+
+.navbar-toggle,.destacats {
+	display: none;
+}
+
+.main-nav {
+	width: 76%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar ul {
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	list-style: none;
+}
+
+.nav-links {
+    text-decoration: none;
+	color: white;
+}
+
+.nav-links:hover {
+	color: greenyellow;
+	cursor: pointer;
+}
+
+#botiga {
+	color: white;
+	margin-right: 40px;
+}
+
+#botiga:hover {
+	color: greenyellow;
+}
+
+.call {
+	color: slategray;
+	border-color: greenyellow;
+	background-color: greenyellow;
+}
+
+.call:hover {
+	color: slategray;
+	background-color: white;
+	border-color: white;
+
+}
+
+main {
+	margin-top: 60px;
+}
+
+
+/* PORTADA */
+
+.portada{
+	width: 100%;
+	height: 700px;
+	display: flex;
+	align-items: center;
+}
+
+.portada h2 {
+	margin-left: 60px;
+	width: 50%;
+	color: white;
+	font-size: 3.5rem;
+	line-height: 1.07;
+	letter-spacing: 0.6px;
+}
+
+form.buscar {
+	margin-right: 60px;
+	height: 44px;
+	width: 50%;
+	
+}
+
+form.buscar input[type=text] {
+	font-family: 'Open Sans', sans-serif;
+	padding: 10px;
+	font-size: 1rem;
+	border: 1px solid white;
+	border-radius: 6px;	
+	width: 80%;
+	background: white;
+  }
+
+form.buscar button {
+	margin-left: 8px;
+	border: 1px;
+	width: 7.5%;
+	padding: 10px;
+	background:greenyellow;
+	color: slategray;
+	font-size: 1.2rem;
+	height: 44px;
+}
+
+/*
+i.fas.fa-search {
+	padding-top: 2px; fa que se centri millor la lupa però el marge top del button puja...
+}
+*/
+
+form.buscar button:hover {
+	background: white;
+	border-color: white;
+	color: slategray;
+}
+
+#videoBG {
+	position: fixed;
+	z-index: -1;
+	width: auto;
+	height: auto;
+}
+
+#videoBG [poster]{
+	width: 100%;
+	height: auto;
+}
+
+/* USUARIS */
+
+.usuaris {
+	height: 120px;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+
+.creadors {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(44,63,82,0.9);
+}
+
+.creadors:hover {
+	cursor: pointer;
+	background-image: url('../img/creadors.jpg');
+	background-repeat: no-repeat;
+	background-position: center center; /* horitzontal / vertical */
+	background-size: cover;
+}
+
+.consumidors {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(44,63,82,0.8);
+}
+
+.consumidors:hover {
+	cursor: pointer;
+	background-image: url('../img/consumidors.jpg');
+	background-repeat: no-repeat;
+	background-position: center center; /* horitzontal / vertical */
+	background-size: cover;
+}
+
+/* CATEGORIES */
+
+.categories {
+	height: 760px;
+	width: 100%;
+	overflow: hidden;
+	background-color: white;
+}
+
+.fotosCategories{
+	height: 84%;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.categoria {
+	width: 33.33333%; /* 1/3 part de la pantalla */
+	height: 50%;
+	display: block;
+}
+
+figure {
+	overflow: hidden;
+	position: relative;
+}
+
+figure img {
+	width: auto; /* perquè les imatges siguin responsive */
+	height: auto; 
+	transition: .6s ease;
+	opacity: 1;
+	display: block;
+}
+
+figure:hover img{
+	transform: scale(1.05); /* zoom */
+	overflow: hidden; /* el zoom no excedeix l'àrea de la imatge */
+}
+
+figcaption {
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	background:rgba(112, 128, 144, 0.6);
+	font-size: 0.9rem;
+	display: flex;
+	flex-flow: row wrap;
+	align-content: flex-end;
+	justify-content: space-between;
+	position: absolute;
+	opacity: 0; /* amaga la caption */
+	transition: .6s ease;
+	top: 50%;
+	left: 50%;
+  	transform: translate(-50%, -50%);
+  	-ms-transform: translate(-50%, -50%);
+}
+
+figure:hover figcaption {
+	opacity: 1;
+}
+
+figcaption h4 {
+	position: absolute;
+}
+
+figcaption span{
+	padding-top: 10px;
+	color: white;
+}
+
+figcaption a {
+	background: greenyellow;
+	color: slategrey;
+	border-radius: 6px;
+	border: 1px;
+	padding: 7px;
+	width: 120px;
+	height: 34px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 0.9rem;
+	cursor: pointer;
+	right: 20px;
+	top: 24px;
+}
+
+figcaption a:hover {
+	background: white;
+}
+
+.nomsCategories{
+	height: 16%;
+	width: 100%;
+	padding-left: 60px;
+	padding-right: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.nomsCategories h3 {
+	color: slategray;
+}
+
+.nomsCategories ul {
+	width: 60%;
+	list-style: none;
+	align-self: center;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row wrap;
+	margin-left: 15px;
+}
+
+.nomsCategories ul li {
+	text-align: left;
+	width: 16.666%;
+	align-self: stretch;
+	padding: 4px;
+}
+
+.nomsCategories ul li a {
+	color: rgb(146, 146, 146);
+	font-size: 0.9rem;
+	padding: 4px;
+}
+
+.nomsCategories ul li a:hover {
+	text-decoration: underline;
+	color: lightgray;
+}
+
+.nomsCategories button {
+	margin: 0;
+	width: 160px;
+}
+
+.nomsCategories button:hover {
+	background: slategray;
+	color: white;
+}
+
+
+/* CREADOR DEL MES*/
+
+.creadorMes {
+	height: 660px;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: lightgray;
+}
+
+.fitxa {
+	width: 30%;
+	height: 60%;
+	margin-left: 60px;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-evenly;
+}
+
+.fitxa img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	/*  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  	/* filter: grayscale(100%);  */
+}
+
+.fitxa p {
+	font-size: 1rem;
+	line-height: 1.5;
+	color: slategray;
+}
+
+.fitxa button {
+	margin: 0;
+}
+
+.fotoMes {
+	width: 60%;
+	height: 100%;
+}
+
+
+/* PER QUÈ WEB */
+
+.perque {
+	height: 660px;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	background-color: white;
+}
+
+.perque h3 {
+	color: slategray;
+}
+
+.perque button {
+	width: 160px;
+	margin: 0;
+}
+
+.perque button:hover {
+	background: slategray;
+	color: white;
+}
+
+.explicacio {
+	width: 98%;
+	height: 60%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.raons{
+	width: 25%;
+	height: 100%;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.raons img {
+	width: 94%;
+	height: auto;
+}
+
+.raons h4 {
+	color: slategray;
+	text-align: center;
+}
+
+.raons p {
+	width: 90%;
+	color: slategray;
+	text-align: center;
+	font-size: 1rem;
+}
+
+/* COL·LECCIONS */
+
+.coleccions {
+	height: 730px;
+	width: 100%;
+	overflow: hidden;
+	background-color: white;
+}
+
+.fotosColeccions{
+	height: 82%;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.coleccio {
+	width: 16.66666%; /* 1/6 part de la pantalla */
+	height: 100%;
+	display: block;
+}
+
+.coleccio figcaption {
+	background:rgba(112, 128, 144, 0.4);
+	opacity: 1;
+	padding: 13px;
+}
+
+.coleccio figcaption span {
+	opacity: 0;
+}
+
+.coleccio figcaption a {
+	margin-top: 20px;
+	opacity: 0;
+}
+
+figure:hover figcaption span, figure:hover figcaption a {
+	opacity: 1;
+}
+
+.claimColeccions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: 60px;
+	margin-right: 60px;
+	height: 18%;
+	
+}
+
+.claimColeccions h3 {
+	width: 90%;
+	color: slategray;
+}
+
+.claimColeccions button {
+	width: 180px;
+}
+
+.claimColeccions button:hover {
+	color: white;
+	background-color: slategray;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+	height: 300px;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	background-color: lightgray;
+}
+
+.imatgeNews {
+	width: 50%;
+	height: auto;
+}
+
+.newsletter img {
+	width: 100%;
+	height: auto;
+}
+
+.formulari {
+	margin-right: 60px;
+	margin-left: 60px;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+}
+
+form.inscriure input[name=name] {
+	font-family: 'Open Sans', sans-serif;
+	padding: 10px;
+	font-size: 0.9rem;
+	border: 1px solid white;
+	border-radius: 6px;	
+	width: 46%;
+	background: white;
+	margin-top: 35px;
+	margin-right: 15px;
+	margin-bottom: 15px;
+}
+
+form.inscriure input[name=email] {
+	font-family: 'Open Sans', sans-serif;
+	padding: 10px;
+	font-size: 0.9rem;
+	border: 1px solid white;
+	border-radius: 6px;	
+	width: 77%;
+	background: white;
+}
+
+form.inscriure button {
+	width: 15%;
+	margin-left: 15px;
+	background:greenyellow;
+	color: slategray;
+}
+
+form.inscriure button:hover {
+	background:white;
+	color: slategray;
+}
+
+
+
+/* FOOTER */
+
+footer {
+	height: 180px;
+	overflow: hidden;
+  	width: 100%;
+	background-color: #2c3f52;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+
+ }
+
+ #credits {
+	 width: 100%;
+	 height: 40%;
+	 display: flex;
+	 justify-content: space-around;
+	 align-items: center;
+ }
+
+ #credits a {
+	 color:rgba(255,255,255,0.8);
+	 font-size: 0.8rem;
+ }
+
+ #credits a:hover {
+	 color: greenyellow;
+ }
+
+.logoFooter {
+	 background-image: url('../img/logo_argos.svg');
+	 background-repeat: no-repeat; /* perquè no es repeteixi la imatge*/
+	 width:100px;
+	 height:28px;
+	 margin-top: 10px;
+ }
+
+.breaker {
+	height: 1px;
+	width: 95%;
+	background-color: rgba(255,255,255,0.2);
+}
+
+#footer-social { 
+	height: 59%;
+	width: 100%;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+#footer-social p {
+	color:rgba(255,255,255,0.7);
+	font-size: 0.7rem;
+}
+
+.contenedor-social {
+	height: 20%;
+	width: 15%;
+	display: flex;
+	justify-content: space-around;
+	align-items:center;
+	margin-bottom: 10px;
+}
+
+.iconaSocial{
+	color:rgba(255,255,255,0.8);
+}
+
+.iconaSocial:hover {
+	color:greenyellow;
+}
+
+
+@media only screen and (max-device-width: 767px) {
+	/* Per a mòbils: */
+	body {
+		font-size: 8px;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+
+	h4 {
+		font-size: 1rem;
+	}
+
+	.navbar {
+		width: 100%;
+	}
+
+	#logo {
+		margin-left: 24px;
+	}
+	
+	.navbar-toggle {
+		display: block;
+		color: white;
+		font-size: 1.4rem;
+		margin-right: 24px;
+		position: absolute;
+		top: 15px;
+    	right: 0px;
+	}
+
+	.main-nav {
+		display: none;
+	}
+
+	.active {
+		display: block;
+	}
+
+	.main-nav.active {
+		top: 60px;
+		bottom: 0px;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		position:absolute;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		background-color: rgba(112,128,144,0.95);
+	}
+
+	.main-nav ul,.dreta,.destacats {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.destacats {
+		height: 15%;
+	}
+
+	.destacat {
+		border: 1px solid #ffffff;
+		background-color: transparent;
+		color: white;
+	}
+	
+	.destacat:hover {
+		border: 1px solid greenyellow;
+		color: greenyellow;
+		cursor: pointer;
+	
+	}
+
+	.main-nav ul {
+		height: 30%;
+	}
+
+	.dreta {
+		height: 15%;
+	}
+
+	#botiga {
+		margin-right: 0px;
+	}
+
+	/* PORTADA */
+
+	.portada {
+		width: 100%;
+		height: 680px;
+		flex-flow: column wrap;
+		justify-content: center;
+	}
+
+	.portada h2 {
+		margin-left: 0px;
+		width: 80%;
+		font-size: 3rem;
+		margin-bottom: 30px;
+	}
+
+	form.buscar {
+		width: 80%;
+		margin-right: 0px;
+	}
+
+	form.buscar input[type=text] {
+		padding: 11px;
+		font-size: 0.9rem;
+		width: 82%;
+	}
+
+	form.buscar button {
+		margin-left: 5px;
+		width: 15%;
+		padding: 10px;
+		font-size: 1.1rem;
+	}
+
+	/* USUARIS */
+
+	.usuaris {
+		flex-flow: column wrap;
+		justify-content: space-evenly;
+		text-align: center;
+		height: 160px;
+	}
+
+	.creadors,.consumidors {
+		width: 100%;
+		height: 50%;
+	}
+
+	/* CATEGORIES */
+
+	.categories {
+		height: auto;
+	}
+
+	.fotosCategories {
+		flex-flow: column wrap;
+	}
+
+	.categoria {
+		width: 100%;
+	}
+
+	.nomsCategories {
+		height: 100px;
+		margin-left: 0px;
+		justify-content: center;
+	}
+
+	.nomsCategories h3, .nomsCategories ul {
+		display: none;
+	}
+
+	.nomsCategories button {
+		margin: 0;
+		width: 160px;
+	}
+
+	/* CREADOR DEL MES*/
+
+	.creadorMes {
+		height: auto;
+		flex-flow: column wrap;
+	}
+
+	.fitxa {
+		margin-left: 0px;
+		width: 80%;
+		height: 600px;
+	}
+
+	.fitxa img {
+	width: 46%;
+	height: 23%;
+	}
+
+	.fitxa button {
+		align-self: center;
+	}
+
+	.fotoMes {
+		width: 100%;
+		left: 70%; /* per centrar la imatge com es vulgui */
+		transform: translate(-70%, 0);
+		-ms-transform: translate(-70%, 0);
+		-webkit-transform: translate(-70%, 0);
+	}
+
+	/* PER QUÈ WEB */
+
+	.perque {
+		height: auto;
+		justify-content: space-between;
+	}
+
+	.perque h3 {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		width: 90%;
+		text-align: center;
+	}
+
+	.explicacio {
+		width: 100%;
+		height: auto;
+		flex-flow: column wrap;
+	}
+
+	.raons {
+		width: 90%;
+		margin-bottom: 40px;
+	}
+
+	.raons img {
+		width: 90%;
+		margin-bottom: 10px;
+	}
+
+	.raons p {
+		width: 90%;
+	}
+
+	.perque button {
+		margin-bottom: 40px;
+	}
+
+	/* COL·LECCIONS */
+
+	.coleccions {
+		height: auto;
+	}
+
+	.fotosColeccions {
+		flex-flow: column wrap;
+	}
+
+	.coleccio {
+		width: 100%;
+	}
+
+	.coleccio img {
+		width: 110%;
+		height: auto;
+	}
+
+	.claimColeccions {
+		justify-content: center;
+		height: 100px;
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.claimColeccions h3 {
+		display: none;
+	}
+
+	.claimColeccions button {
+		width: 180px;
+		margin-left: 0px;
+	}	
+
+	/* NEWSLETTER */
+
+	.newsletter {
+		height: auto;
+		flex-flow: column wrap;
+	}
+
+	.imatgeNews {
+		width: 100%;
+		left: 50%;
+		transform: translate(-50%, 0);
+		-ms-transform: translate(-50%, 0);
+		-webkit-transform: translate(-50%, 0);
+		margin-bottom: 40px;
+	}
+
+	.formulari {
+		margin-right: 0px;
+		margin-left: 0px;
+		width: 80%;
+		height: auto;
+		margin-bottom: 40px;
+	}
+
+	.formulari h4 {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	form.inscriure input[name=name] {
+		padding: 8px;
+		font-size: 0.9rem;
+		width: 100%;
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 15px;
+		
+	}
+
+	form.inscriure input[name=email] {
+		padding: 8px;
+		font-size: 0.9rem;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+
+	form.inscriure button {
+		width: 36%;
+		margin-left: 0px;
+	}
+
+	/* FOOTER */
+
+	footer {
+		height: 160px;
+	}
+
+	#credits {
+		flex-flow: column wrap;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	#credits a {
+		height: 30%;
+	}
+
+	.logoFooter {
+		display: none;
+	}
+
+	#footer-social { 
+		margin-top: 10px;
+		height: 30%
+	}
+	
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1200px) {
+	/* Per a tablets: */
+	body {
+		font-size: 12px;
+	}
+
+	h3 {
+		font-size: 1.9rem;
+	}
+
+	h4 {
+		font-size: 1.3rem;
+	}
+
+	.navbar {
+		width: 100%;
+	}
+
+	#logo {
+		margin-left: 24px;
+	}
+	
+	.navbar-toggle {
+		display: block;
+		color: white;
+		font-size: 1.4rem;
+		margin-right: 24px;
+		position: absolute;
+		top: 15px;
+    	right: 0px;
+	}
+
+	.main-nav {
+		display: none;
+	}
+
+	.active {
+		display: block;
+	}
+
+	.main-nav.active {
+		width: 50%;
+		height: 100%;
+		right: 0;
+		top: 60px;
+		bottom: 0px;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		position:absolute;
+		position: fixed;
+		background-color: rgba(112,128,144,0.95);
+	}
+
+	.main-nav ul,.dreta,.destacats {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+
+	.destacats {
+		height: 15%;
+	}
+
+	.destacat {
+		border: 1px solid #ffffff;
+		background-color: transparent;
+		color: white;
+	}
+	
+	.destacat:hover {
+		border: 1px solid greenyellow;
+		color: greenyellow;
+		cursor: pointer;
+	
+	}
+
+	.main-nav ul {
+		height: 30%;
+	}
+
+	.dreta {
+		height: 15%;
+	}
+
+	#botiga {
+		margin-right: 0px;
+	}
+
+	/* PORTADA */
+
+	.portada {
+		width: 100%;
+		height: 820px;
+		flex-flow: column wrap;
+		justify-content: center;
+	}
+
+	.portada h2 {
+		margin-left: 0px;
+		width: 80%;
+		font-size: 3rem;
+		margin-bottom: 40px;
+	}
+
+	form.buscar {
+		width: 80%;
+		margin-right: 0px;
+	}
+
+	form.buscar input[type=text] {
+		padding: 11px;
+		font-size: 0.9rem;
+		width: 82%;
+	}
+
+	form.buscar button {
+		margin-left: 5px;
+		width: 10%;
+		padding: 10px;
+		font-size: 1.1rem;
+	}
+
+	/* CATEGORIES */
+
+	.categories {
+		height: 1140px;
+	}
+
+	.fotosCategories {
+		flex-flow: column wrap;
+	}
+
+	.categoria {
+		width: 50%;
+		height: 33.33333%;
+	}
+
+	.nomsCategories {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		flex-flow: column wrap;
+		justify-content: space-evenly;
+	}
+
+	.nomsCategories ul {
+		width: 100%;
+		margin-left: 0px;
+	}
+
+	.nomsCategories button {
+		margin: 0;
+		width: 160px;
+	}
+
+	/* CREADOR DEL MES*/
+
+	.creadorMes {
+		height: auto;
+		flex-flow: column wrap;
+	}
+
+	.fitxa {
+		margin-left: 0px;
+		width: 80%;
+		height: 400px;
+		align-items: center;
+		text-align: center;
+	}
+
+	.fitxa img {
+		width: 100px;
+		height: 100px;
+		}
+
+	.fitxa button {
+		align-self: center;
+	}
+
+	.fotoMes {
+		width: 100%
+	}
+
+	/* PER QUÈ WEB */
+
+	.perque {
+		height: auto;
+		justify-content: space-between;
+	}
+
+	.perque h3 {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		width: 90%;
+		text-align: center;
+	}
+
+	.explicacio {
+		width: 100%;
+		height: auto;
+		flex-flow: column wrap;
+	}
+
+	.raons {
+		width: 90%;
+		margin-bottom: 40px;
+	}
+
+	.raons img {
+		width: 94%;
+		margin-bottom: 10px;
+	}
+
+	.raons p {
+		width: 94%;
+	}
+
+	.perque button {
+		margin-bottom: 40px;
+	}
+
+	/* COL·LECCIONS */
+
+	.coleccions {
+		height: 2610px;
+	}
+
+	.fotosColeccions {
+		flex-flow: column wrap;
+		height: 91%
+	}
+
+	.coleccio {
+		width: 50%;
+		height: 33.33333%;
+	}
+
+	.coleccio img {
+		width: 110%;
+		height: auto;
+	}
+
+	.claimColeccions {
+		flex-flow: column wrap;
+		justify-content: space-evenly;
+		width: 100%;
+		height: 9%;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.claimColeccions h3 {
+		text-align: center;
+		width: 90%;
+	}
+
+	.claimColeccions button {
+		width: 180px;
+		margin-left: 0px;
+	}	
+
+	/* NEWSLETTER */
+
+	.newsletter {
+		height: auto;
+		flex-flow: column wrap;
+	}
+
+	.imatgeNews {
+		width: 100%;
+		height: auto;
+		margin-bottom: 27px;
+		zoom: 120%;
+		overflow: hidden;
+	}
+
+	.formulari {
+		margin-right: 0px;
+		margin-left: 0px;
+		width: 80%;
+		height: auto;
+		margin-bottom: 40px;
+	}
+
+	.formulari h4 {
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	form.inscriure input[name=name] {
+		padding: 8px;
+		font-size: 0.9rem;
+		width: 100%;
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 15px;
+		
+	}
+
+	form.inscriure input[name=email] {
+		padding: 8px;
+		font-size: 0.9rem;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+
+	form.inscriure button {
+		width: 18%;
+		margin-left: 0px;
+	}
+
+}
+
+/* VÍDEO PORTADA */
+
+@media (min-aspect-ratio: 16/9) {
+    #videoBG {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #videoBG { 
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    #videoBG {
+		top: 10px;
+        width: auto;
+        height: 100%;
+	}
+}

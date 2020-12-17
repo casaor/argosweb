@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="cat">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="author" content="Carlota Sas">
+        <meta name="description" content="Argos és banc d’imatges diferent on els usuaris trobaran les fotos que no han trobat enlloc més.">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Argos - Unconventional stock images</title>
+        <link rel="shortcut icon" href="img/ull.png" type="image/png">
+        <!-- custom CSS -->
+        <link rel="stylesheet" type="text/css" href="css/estils.css">
+        <!-- tipografies Google: Open Sans i Arya -->
+        <link href="https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <!-- llibreria icones -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+    </head>
+
+
+    <body>
+
+        <header>
+
+                <nav class="navbar">
+
+                    <h1 id="logo"><a href="index.html"></a>Argos</h1>
+
+                    <span class="navbar-toggle" id="js-navbar-toggle"><i class="fas fa-bars"></i></span>
+
+                    <div class="main-nav" id="js-menu">
+                        <div class="destacats">
+                            <button type="button" class="destacat" onclick="">Categories</button>
+                            <button type="button" class="destacat" onclick="">Col·leccions</button>
+                        </div>
+
+                        <ul>
+                            <li><a class="nav-links">Creadors</a></li>
+                            <li><a class="nav-links">Usuaris</a></li>
+                            <li><a class="nav-links">Suport</a></li>
+                            <li><a class="nav-links">About</a></li>
+                        </ul>
+
+                        <div class="dreta">
+                            <a href="" id="botiga"><i class="fas fa-shopping-cart"></i></a> <!-- icona amb font awesome -->
+                            <button type="button" class="call" onclick="">Inicia sessió</button>
+                        </div>
+                    </div>
+                </nav>
+                   
+        </header>
+
+
+        <main>
+
+                <section class="portada">
+
+                    <h2>Busca les imatges <br> menys convencionals</h2>
+
+                    <form class="buscar" action="">
+                        <input type="text" placeholder="Què no has trobat?" name="search">
+                        <button type="submit"><i class="fas fa-search"></i></button>
+                    </form>
+
+                    <video id="videoBG" poster="img/poster.jpg" autoplay muted loop>
+                        <source src="img/video.mp4" type="video/mp4" title="vídeo d'Andy Barbour">
+                    </video>
+
+                </section>
+
+                <section class="usuaris"> 
+
+                    <div class="creadors">
+                        <a href=""><h3>t'agrada fotografiar?</h3></a>
+                    </div>
+
+                    <div class="consumidors">
+                        <a href=""><h3>passes hores mirant fotos?</h3></a>                         
+                    </div>
+
+                </section>
+
+                <section class="categories">
+                    
+                    <article class="fotosCategories">
+                        <div class="categoria">
+                            <figure>
+                                <img src="img/menjar.jpg" alt="menjar">
+                                <figcaption>
+                                    <h4>menjar</h4>
+                                    <span>Foto de Gogosvm</span>
+                                    <a href="https://www.istockphoto.com/es/foto/algodón-de-azúcar-gm963824500-263192219" target="_blank" class="boto">Veure'n més</a> <!-- target _blank perquè obri en una altra finestra -->
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="categoria">
+                            <figure>
+                                <img src="img/dia.jpg" alt="dia a dia" >
+                                <figcaption>
+                                    <h4>dia a dia</h4>
+                                    <span>Foto de Willie B. Thomas</span>
+                                    <a href="https://www.gettyimages.es/detail/foto/woman-waking-up-in-bed-imagen-libre-de-derechos/1127395377?adppopup=true" target="_blank" class="boto">Veure'n més</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="categoria">
+                            <figure>
+                                <img src="img/teletreball.jpg" alt="teletreball">
+                                <figcaption>
+                                    <h4>teletreball</h4>
+                                    <span>Foto de Reuters</span>
+                                    <a href="https://www.businessinsider.es/gobierno-plantea-empresas-corran-gastos-teletrabajo-666989" target="_blank" class="boto">Veure'n més</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="categoria">
+                            <figure>
+                                <img src="img/distancia.jpg" alt="actualitat">
+                                <figcaption>
+                                    <h4>actualitat</h4>
+                                    <span>Foto de David Ramos</span>
+                                    <a href="https://www.latimes.com/science/story/2020-03-18/coronavirus-tips-the-dos-and-donts-of-social-distancing" target="_blank" class="boto">Veure'n més</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="categoria">
+                            <figure>
+                                <img src="img/genZ.jpg" alt="generació Z">
+                                <figcaption>
+                                    <h4>generació Z</h4>
+                                    <span>Foto de Markus Spiske</span>
+                                    <a href="https://unsplash.com/photos/MQ98Nn5A3nE" target="_blank" class="boto">Veure'n més</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="categoria">
+                            <figure>
+                                <img src="img/residus.jpg" alt="residus">
+                                <figcaption>
+                                    <h4>residus</h4>
+                                    <span>Foto de Magda Ehler</span>
+                                    <a href="https://www.esciupfnews.com/es/2020/04/29/covid-19-gestio-residus-casa/" target="_blank" class="boto">Veure'n més</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </article>
+
+                    <article class="nomsCategories">
+                        <h3>noves categories</h3>
+                        <ul>
+                            <li><a href="">xocolata</a></li>
+                            <li><a href="">creació</a></li>
+                            <li><a href="">cues</a></li>
+                            <li><a href="">gestos</a></li>
+                            <li><a href="">clima</a></li>
+                            <li><a href="">programació</a></li>
+                            <li><a href="">música</a></li>
+                            <li><a href="">terrasses</a></li>
+                            <li><a href="">mascaretes</a></li>
+                            <li><a href="">esports</a></li>
+                            <li><a href="">sanitat</a></li>
+                            <li><a href="">fake news</a></li>
+                        </ul>
+                        <button type="button" class="call" onclick="">Totes les categories</button>
+
+                    </article>
+
+                </section>
+                
+
+                <section class="creadorMes">
+
+                    <article class="fitxa">
+                        <img src="img/avatar.jpg" alt="victoria kubiaki">
+                        <h3>creadora del mes</h3>
+                        <p><b>Victória Kubiaki</b> és una periodista de formació però fotògrafa de professió que ja fa temps va decidir informar i explicar històries amb imatges, cosa que fa diàriament en una agència local. A més, també treu temps per a projectes personals relacionats amb la fotografia i per participar en mostres.</p>
+                        <button type="button" class="call" onclick="">Més creadors</button>
+                    </article>
+
+                    <article class="fotoMes">
+                        <img class="mySlides" src="img/vic1.jpg" alt="foto de victoria kubiaki">
+                        <img class="mySlides" src="img/vic2.jpg" alt="foto de victoria kubiaki">
+                        <img class="mySlides" src="img/vic3.jpg" alt="foto de victoria kubiaki">
+                        <img class="mySlides" src="img/vic4.jpg" alt="foto de victoria kubiaki">
+                        <img class="mySlides" src="img/vic5.jpg" alt="foto de victoria kubiaki">
+                        <img class="mySlides" src="img/vic6.jpg" alt="foto de victoria kubiaki">
+                    </article>
+                    
+                </section>
+
+
+                <section class="perque">
+
+                    <h3>Per què un banc d'imatges de stock diferent?</h3>
+
+                    <article class="explicacio"></div>
+                        <div class="raons">
+                            <img src="img/xq1.jpg" alt="victoria kubiaki">
+                            <h4>Perquè ho mostrem tal com és</h4>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
+                        </div>
+                        <div class="raons">
+                            <img src="img/xq2.jpg" alt="victoria kubiaki">
+                            <h4>Perquè volem ser útils</h4>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
+                        </div>
+                        <div class="raons">
+                            <img src="img/xq3.jpg" alt="victoria kubiaki">
+                            <h4>Perquè estem a prop de la realitat</h4>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
+                        </div>
+                        <div class="raons">
+                            <img src="img/xq4.jpg" alt="victoria kubiaki">
+                            <h4>Perquè ho pots necessitar</h4>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia.</p>
+                        </div>
+                    </article>
+
+                    <button type="button" class="call" onclick="">Llegeix el manifest</button>
+                
+                </section>
+
+                <section class="coleccions">
+
+                    <article class="fotosColeccions">
+                        <div class="coleccio">
+                            <figure>
+                                <img src="img/col1.jpg" alt="bojos perla fotografia">
+                                <figcaption>
+                                    <h4>bojos per la fotografia</h4>
+                                    <span>Foto de Carlo Cagnin</span>
+                                    <a href="https://www.pexels.com/ca-es/foto/brasil-camera-digital-camera-reflex-digital-cameres-1860704/" target="_blank" class="boto">Veure'n més</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="coleccio">
+                            <figure>
+                                <img src="img/col6.jpg" alt="arquitectures del món">
+                                <figcaption>
+                                    <h4>arquitectures del món</h4>
+                                    <span>Foto de Yongzheng Xu</span>
+                                    <a href="https://unsplash.com/photos/TD1ZckpeXwc" target="_blank" class="boto">Veure'n més</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="coleccio">
+                            <figure>
+                                <img src="img/col3.jpg" alt="el que fèiem abans">
+                                <figcaption>
+                                    <h4>el que fèiem abans</h4>
+                                    <span>Foto de Ferran Sendra</span>
+                                    <a href="https://www.elperiodico.com/es/ocio-y-cultura/20200319/coronavirus-alerta-roja-musica-directo-7897317" target="_blank" class="boto">Veure'n més</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="coleccio">
+                            <figure>
+                                <img src="img/col4.jpg" alt="barcelona no turística">
+                                <figcaption>
+                                    <h4>la barcelona no turística </h4>
+                                    <span>Foto de David Ramos</span>
+                                    <a href="https://www.latimes.com/science/story/2020-03-18/coronavirus-tips-the-dos-and-donts-of-social-distancing" target="_blank" class="boto">Veure'n més</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="coleccio">
+                            <figure>
+                                <img src="img/col5.jpg" alt="experimental">
+                                <figcaption>
+                                    <h4>experimental</h4>
+                                    <span>Foto de Ryan Cryarr</span>
+                                    <a href="https://unsplash.com/photos/T-SDVHQUcgc" target="_blank" class="boto">Veure'n més</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="coleccio">
+                            <figure>
+                                <img src="img/col2.jpg" alt="virals" >
+                                <figcaption>
+                                    <h4>virals</h4>
+                                    <span>Creative Commons</span>
+                                    <a href="https://diariosanitario.com/sacos-mantillo-uci-albacete/" target="_blank" class="boto">Veure'n més</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </article>
+
+                    <article class="claimColeccions">
+                        <h3>navega per les noves col·leccions: creades especialment per agrupar les fotos en temes menys convencionals però igual d'útils. Fes també les teves propostes!</h3>
+                        <button type="button" class="call" onclick="">Totes les col·leccions</button>
+                    </article>
+                    
+                </section>
+
+                <section class="newsletter">
+
+                    <div class="imatgeNews">
+                        <img src="img/mobil.jpg" alt="gent mirant el mòbil">
+                    </div>
+
+                    <div class="formulari">
+                        <h4>Vols estar a la última? Subscriu-te a la nostra newsletter!</h4>
+                        <form class="inscriure" action="">
+                            <input type="text" placeholder="Nom" name="name">
+                            <input type="text" placeholder="Cognom" name="name">
+                            <input type="text" placeholder="Email" name="email">
+                            <button type="submit">Subscriu-te</button>
+                        </form>
+                    </div>
+
+                </section>
+
+        </main>
+
+
+        <footer>
+
+            <section id="credits">
+                <a href="">Contacte</a>
+                <a href="">Comunitat</a>
+                <a href="">Suport</a>
+                <a href="index.html" class="logoFooter"></a>
+                <a href="">About</a>
+                <a href="">Política de preus</a>
+                <a href="">Legal</a>
+            </section>
+
+            <div class="breaker"></div>
+
+            <section id="footer-social">
+
+                <div class="contenedor-social">
+                    <a class="iconaSocial" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="iconaSocial" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="iconaSocial" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="iconaSocial" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="iconaSocial" href=""><i class="fas fa-envelope"></i></a>
+                </div>
+
+                <p>© Argos, unconventional stock images, 2020</p>
+
+            </section>
+            
+        </footer>
+
+        <script>
+            var myIndex = 0;
+            carousel();
+            
+            function carousel() {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              myIndex++;
+              if (myIndex > x.length) {myIndex = 1}    
+              x[myIndex-1].style.display = "block";  
+              setTimeout(carousel, 5000); //  Canvia la imatge cada 5 segons
+            }
+
+            let mainNav = document.getElementById('js-menu');
+            let navBarToggle = document.getElementById('js-navbar-toggle');
+
+            navBarToggle.addEventListener('click', function() {
+                mainNav.classList.toggle('active');
+            });
+
+            </script>
+
+    </body>
+</html>
